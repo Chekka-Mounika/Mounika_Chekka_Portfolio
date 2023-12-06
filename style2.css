@@ -14,7 +14,7 @@
     width: 0;
     height: 20px;
     background: linear-gradient(to right, #ffcc00, #00cc66, #0066cc);
-    animation: fillWidth 5s ease-in-out forwards;
+    animation: fillWidth 5s ease-in-out infinite;
 }
 
 .skill-label {
