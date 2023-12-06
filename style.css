@@ -1,0 +1,84 @@
+.body{
+    margin: 0;
+    background-color: black;
+}
+.container{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+#wnm {
+    background: linear-gradient(to right, #ffcc00, #00cc66, #0066cc);
+    color: black;
+    padding: 15px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin: 10px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+#wnm:hover {
+    border-bottom: 2px solid whitesmoke;
+    background: linear-gradient(to right, #0066cc, #00cc66, #ffcc00);
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+#name_text{
+    font-family: 'Roboto', sans-serif;
+            margin-bottom: 5px;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typing 2s  infinite;
+}
+@keyframes rotate {
+    from {
+        width: 0;
+    }
+    to {
+        width: 75%;
+    }
+}
+
+
+#arrow {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    margin-top: 0px;
+    animation: rotate 2s  infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes incr_size {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+#profile_pic{
+    animation: incr_size 1.5s ease-out;
+}

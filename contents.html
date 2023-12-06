@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mounika Portfolio</title>
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar {
+            background-color: #333;
+            width: 100%;
+            /* display: flex;
+            justify-content: center; */
+            position: fixed;
+    top: 0;
+    z-index: 100;
+        }
+
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+           
+            background: linear-gradient(to right, yellow,  green);
+        }
+        .navbar a.active {
+            background: linear-gradient(to right, yellow,  green);
+            color: black;
+            border-bottom: 4px solid white;
+        }
+        .navbar .icon {
+            display: none;
+        }
+
+        @media screen and (max-width: 600px) {
+            .navbar a:not(:first-child) {
+                display: none;
+            }
+            .navbar a.icon {
+                float: right;
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .navbar.responsive a.icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .navbar.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+  
+        .education {
+            margin-top: 20px;
+            padding-left: 4px;
+            border: 1px solid gray;
+            border-radius: 10px;
+            width: 75%;
+            margin-bottom: 30px;
+           
+        }
+        .education h2{
+            padding-top: 20px;
+        }
+    
+        .education:hover {
+            box-shadow: 0 0 20px 10px rgba(143, 182, 14, 0.5); /* Gradient box shadow on hover */
+        }
+        
+
+        h2 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-size: 1.5em;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        li {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            font-size: 1em;
+        }
+      
+
+        ul.fashioned-list li:first-child:before {
+            height: 50%; /* Adjust the height of the line for the first item */
+        }
+
+
+        @keyframes typing_ {
+        from {
+         width: 0;
+            }
+        to {
+        width: 100%;
+        }
+    }
+    .education h2 {
+        display: inline;
+         animation: typing_ 2s infinite;
+    }
+  
+    @keyframes incr_size {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+    .profile_pic{
+    animation: incr_size 1.5s infinite;
+    display: block;
+    }
+  
+    </style>
+</head>
+<script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApCdSLqh7DAT7dDQJDpanZGs5zf_Xd6Kg&callback=initMap">
+</script>
+<body>
+
+<div class="navbar" id="myNavbar">
+    
+    <a href="#education" onclick="changeActive(this)">Education</a>
+    <a href="#experience" onclick="changeActive(this)">Experience</a>
+    <a href="#projects" onclick="changeActive(this)">Projects</a>
+    <a href="#skills" onclick="changeActive(this)">Technical Skills</a>
+    <a href="#responsibilities" onclick="changeActive(this)">Position of Responsibilities</a>
+    <a href="#contact" onclick="changeActive(this)">Contact me</a>
+   
+    <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+        &#9776;
+    </a>
+    
+</div>
+<br>
+
+<div  id="content" style="width: 100%;display: flex;flex-direction: column;justify-content: center;align-items: center;margin-top: 50px;">
+    <div class="education" style="color: white;" >
+       <h2><div id="education">Education</div></h2>
+        <ul class="fashioned-list">
+            <li><b style="color: yellowgreen;">Secondary High School:</b> Aditya Educational Institutions (Andhra Pradesh,India)</li>
+            |<br>
+            |<br>
+            |<br>
+            |<br>
+            <li><b  style="color: yellowgreen;">Bachelors:</b> Indian Institute of Technology Dharwad </li><br>
+            <b style="color: yellow;">(2021-2025)</b>
+            Major in <b style="color: yellow;">Computer Science and Engineering</b></ul>
+        </ul>
+        <div style="margin: auto;"><img src="books.png" alt="Mounika Chekka" class="profile_pic" style="margin: auto;width: 150px;" ></div>
+    </div>
+    <div class="education" style="color: white;" >
+        <h2 id="experience">Experience</h2>
+        <ul class="fashioned-list">
+            <li><b style="color: yellowgreen;">UNITEDOVER LLC (Backened intern in web development) </b> <br><br>
+                 <b style="color: yellow;">Jan 2023-Feb 2023</b>
+                <ul style="list-style-type:square">
+                    <li>Formulated logic to host multiple domains using single nginx server.</li>
+                    |<br> |<br>
+                    <li>Used lock and unlock file system to add domains to configuration file, to create a new file if required
+                        configuration file is locked by some process. Also maintained constraint to not to exceed 100 domains in each
+                        config file.</li>
+                    |<br> |<br>
+                    <li> Kept track of domains, config files in a database to utilize the existing configuration files as best as possible
+                        without creating new ones.</li>
+                    |<br> |<br>
+                    <li>Implemented the whole logic in Python.</li>
+                </ul>
+            </li>
+           
+        </ul>
+        <div style="margin: auto;"><img src="exper.png" alt="Mounika Chekka" class="profile_pic" style="margin: auto;width: 150px;" ></div>
+    </div>
+    <div class="education" style="color: white;" id="projects">
+        <h2>Projects</h2>
+        <ul class="fashioned-list">
+            <li><b style="color: yellowgreen;">Pipelined processor</b> <i style="color: yellow;">[Java,TOY-Risc]  </i>
+                <ul style="list-style-type:square">
+                    <li>Created a simulator file which takes a.out as input and process each dynamic instruction</li>
+                    <li>Simulated a 5 staged pipelined processor for Toy-RISC assembly language.
+                    </li>
+                    <li>Involved data inter locks , branch inter locks</li>
+                    <li><a href="https://github.com/Chekka-Mounika/Pipelined_processor"><img src="github.png" style="width:50px;"></a></li>
+                </ul>
+            </li>
+           
+        </ul>
+        <br>
+        <br>
+        <br>
+        <ul class="fashioned-list">
+            <li><b style="color: yellowgreen;">Assembling to Binary converter</b> <i style="color: yellow;">[Java,TOY-Risc]  </i>
+                <ul style="list-style-type:square">
+                    <li>Created a simulator file which converts .asm file into executable file.</li>
+                    <li>It uses 30 Instruction Set Architechture of TOY-Risc and creates static instructions. </li>
+                    <li><a href="https://github.com/Chekka-Mounika/Asm_to_Binary_converter"><img src="github.png" style="width:50px;"></a></li>
+                </ul>
+            </li>
+           
+        </ul>
+        <br>
+        <br>
+        <br>
+        <ul class="fashioned-list">
+            <li><b style="color: yellowgreen;">Social media app </b> <i style="color: yellow;">[Java android,XML]  </i>
+                <ul style="list-style-type:square">
+                    <li>Developed android app where users can sign up, login and share posts.
+                       </li>
+                    <li>Users can chat with other users. Used different adapters to distinguish incoming and outgoing messages</li>
+                    <li><a href="https://github.com/Chekka-Mounika/Social_media_app"><img src="github.png" style="width:50px;"></a></li>
+                </ul>
+            </li>
+           
+        </ul>
+        <br>
+        <br>
+        <br>
+        <ul class="fashioned-list">
+            <li><b style="color: yellowgreen;">IIT Dharwad Library management system </b> <i style="color: yellow;">[Python,SQL]  </i>
+                <ul style="list-style-type:square">
+                    <li>Developed android app where users can sign up, login and share posts.
+                       </li>
+                    <li>Users can chat with other users. Used different adapters to distinguish incoming and outgoing messages</li>
+                    <li><a href="https://github.com/Chekka-Mounika/IIT_Dharwad_library_management"><img src="github.png" style="width:50px;"></a></li>
+                </ul>
+            </li>
+           
+        </ul>
+        <br>
+        <br>
+        <br>
+        <ul class="fashioned-list">
+            <li><b style="color: yellowgreen;">Ecommerce portal </b> <i style="color: yellow;">[HTML,CSS,Javascript,SQL,PHP]  </i>
+                <ul style="list-style-type:square">
+                    <li>Developed android app where users can sign up, login and share posts.
+                       </li>
+                    <li>Users can chat with other users. Used different adapters to distinguish incoming and outgoing messages</li>
+                    <li><a href="https://github.com/Chekka-Mounika/Eccomerce_website"><img src="github.png" style="width:50px;"></a></li>
+                </ul>
+            </li>
+           
+        </ul>
+        <br>
+        <br>
+        <br>
+        <ul class="fashioned-list">
+            <li><b style="color: yellowgreen;">Interview scheduler </b> <i style="color: yellow;">[Python,Z3 library]  </i>
+                <ul style="list-style-type:square">
+                    <li>This is terminal based interview scheduler.
+                       </li>
+                    <li>Gives the slot alloted table for the given candidates availability and given time slots</li>
+                    <li>It prints whether the solution available for the given set of conditions</li>
+                    <li><a href="https://github.com/Chekka-Mounika/Interview_scheduler"><img src="github.png" style="width:50px;"></a></li>
+                </ul>
+            </li>
+           
+        </ul>
+    </div>
+
+    <div class="education" style="color: white;" >
+        <h2><div id="skills">Skills</div></h2>
+         
+            <div class="skills-container">
+                <div class="skill" data-percent="70" style="border: 1px solid gray;">
+                    <span class="skill-label">C</span>
+                    <div class="skill-bar"></div>
+                    
+                </div>
+                <!-- Add more skills with the same structure -->
+            </div>
+            <div class="skills-container">
+                <div class="skill" data-percent="80" style="border: 1px solid gray;">
+                    <span class="skill-label">C++</span>
+                    <div class="skill-bar"></div>
+                    
+                </div>
+                <!-- Add more skills with the same structure -->
+            </div>
+            <div class="skills-container">
+                <div class="skill" data-percent="70" style="border: 1px solid gray;">
+                    <span class="skill-label">Java</span>
+                    <div class="skill-bar"></div>
+                    
+                </div>
+                <!-- Add more skills with the same structure -->
+            </div>
+            <div class="skills-container">
+                <div class="skill" data-percent="60" style="border: 1px solid gray;">
+                    <span class="skill-label">Python</span>
+                    <div class="skill-bar"></div>
+                    
+                </div>
+                <!-- Add more skills with the same structure -->
+            </div>
+            <div class="skills-container">
+                <div class="skill" data-percent="60" style="border: 1px solid gray;">
+                    <span class="skill-label">PHP</span>
+                    <div class="skill-bar"></div>
+                    
+                </div>
+                <!-- Add more skills with the same structure -->
+            </div>
+            <div class="skills-container">
+                <div class="skill" data-percent="80" style="border: 1px solid gray;">
+                    <span class="skill-label">SQL</span>
+                    <div class="skill-bar"></div>
+                    
+                </div>
+                <!-- Add more skills with the same structure -->
+            </div>
+            <div class="skills-container">
+                <div class="skill" data-percent="80" style="border: 1px solid gray;">
+                    <span class="skill-label">HTML</span>
+                    <div class="skill-bar"></div>
+                    
+                </div>
+                <!-- Add more skills with the same structure -->
+            </div>
+            <div class="skills-container">
+                <div class="skill" data-percent="60" style="border: 1px solid gray;">
+                    <span class="skill-label">CSS</span>
+                    <div class="skill-bar"></div>
+                    
+                </div>
+                <!-- Add more skills with the same structure -->
+            </div>
+            <div class="skills-container">
+                <div class="skill" data-percent="75" style="border: 1px solid gray;">
+                    <span class="skill-label">PostGreSQL</span>
+                    <div class="skill-bar"></div>
+                    
+                </div>
+                <!-- Add more skills with the same structure -->
+            </div>
+            <div class="skills-container">
+                <div class="skill" data-percent="60" style="border: 1px solid gray;">
+                    <span class="skill-label">Neo4j-(Graph database)</span>
+                    <div class="skill-bar"></div>
+                    
+                </div>
+                <!-- Add more skills with the same structure -->
+            </div>
+            <div class="skills-container">
+                <div class="skill" data-percent="60" style="border: 1px solid gray;">
+                    <span class="skill-label">MongoDB</span>
+                    <div class="skill-bar"></div>
+                    
+                </div>
+                <!-- Add more skills with the same structure -->
+            </div>
+            <div class="skills-container">
+                <div class="skill" data-percent="60" style="border: 1px solid gray;">
+                    <span class="skill-label">Bootstrap</span>
+                    <div class="skill-bar"></div>
+                    
+                </div>
+                <!-- Add more skills with the same structure -->
+            </div>
+            <div class="skills-container">
+                <div class="skill" data-percent="60" style="border: 1px solid gray;">
+                    <span class="skill-label">Git</span>
+                    <div class="skill-bar"></div>
+                    
+                </div>
+                <!-- Add more skills with the same structure -->
+            </div>
+            <div class="skills-container">
+                <div class="skill" data-percent="60" style="border: 1px solid gray;">
+                    <span class="skill-label">Github</span>
+                    <div class="skill-bar"></div>
+                    
+                </div>
+                <!-- Add more skills with the same structure -->
+            </div>
+     </div>
+     <div class="education" style="color: white;" >
+        <h2><div id="responsibilities">Position of responsibilities</div></h2>
+         <ul class="fashioned-list">
+             <li>Member of outreach team in IIC <b style="color: yellow;">(Institute Innovation Council)</b> Dharwad</li>
+             <li>Member of dramatics club of college</li>
+         </ul>
+         <div style="margin: auto;"><img src="resp.png" alt="Mounika Chekka" class="profile_pic" style="margin: auto;width: 150px;" ></div>
+     </div>
+     <div class="education" style="color: white;">
+        <h2><div id="contact">Contact</div></h2>
+    
+        <div style="display: flex;justify-self: center;align-items: center; padding: 20px;">
+            <br>
+            <br>
+            <div style="margin: auto;">
+            <a href="mailto:chvsmounika29@gmail.com" target="_blank" style="margin: 10px;">
+                <img src="email.png" alt="Email" style="width: 40px;">
+            </a>
+           
+            <a href="tel:+917989755357" target="_blank" style="margin: 10px;">
+                <img src="phone-removebg-preview.png" alt="Email" style="width: 40px;">
+            </a>
+           
+            <a href="https://github.com/Chekka-Mounika" target="_blank" style="margin: 10px;">
+                <img src="github.png" alt="Email" style="width: 40px;">
+            </a>
+            </div>
+           
+            <br>
+            <br>
+        </div>
+    </div>
+  
+    
+</div>
+
+<script>
+    function toggleNavbar() {
+        var navbar = document.getElementById("myNavbar");
+        navbar.classList.toggle("responsive");
+    }
+    function changeActive(clickedElement) {
+        var navbarLinks = document.querySelectorAll('.navbar a');
+        navbarLinks.forEach(link => link.classList.remove('active'));
+
+        clickedElement.classList.add('active');
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+    const skills = document.querySelectorAll(".skill");
+
+    skills.forEach(skill => {
+        const percent = skill.getAttribute("data-percent");
+        skill.style.setProperty("--percent", percent + "%");
+    });
+});
+
+
+
+</script>
+
+</body>
+</html>
