@@ -16,25 +16,27 @@
     display: flex;
     flex-direction: column;
     align-items: start;
-    width: 50%;
+    width: 48%;
+    height: 50%;
 }
 
 #wnm {
     background: linear-gradient(to right, #ffcc00, #00cc66, #0066cc);
     color: black;
-    padding: 15px 30px;
-    font-size: 16px;
+    width: 75%;
+    height: 20%;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
     margin: 10px;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     font-weight: bold;
+    padding: 3vh;
 }
 
 #wnm:hover {
-    border-bottom: 2px solid whitesmoke;
+    border-left: 4px solid whitesmoke;
     background: linear-gradient(to right, #0066cc, #00cc66, #ffcc00);
 }
 @keyframes typing {
@@ -47,7 +49,7 @@
 }
 
 #name_text{
-    font-family: 'Roboto', sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin-bottom: 5px;
             overflow: hidden;
             white-space: nowrap;
@@ -64,12 +66,11 @@
 
 
 #arrow {
-    width: 70px;
-    height: 70px;
-    margin: auto;
-    margin-top: 0px;
+    width: 20px;
+    
+    
     animation: rotate 2s  infinite;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 @keyframes incr_size {
@@ -86,7 +87,7 @@
     margin: auto;
 }
 .right{
-    width: 50%;
+    width: 48%;
     /* border: 0.1px solid white; */
     display: flex;
     justify-content: center;
