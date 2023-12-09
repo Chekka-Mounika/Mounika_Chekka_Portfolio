@@ -7,6 +7,10 @@
     <title>Mounika Chekka - Portfolio</title>
     <style>
         @media screen and (max-width: 600px) {
+        .html{
+            background-color: black;
+           height: 100vh;
+        }
          .container{
              display: flex;
              flex-direction: column;
@@ -14,12 +18,17 @@
              align-items: center;
              width: 100%;
              height: 100%;
+             flex-wrap: wrap;
+             margin: auto;
+             background-color: white;
          }
          .right{
              width: 80%;
              display: flex;
              align-items: center;
              justify-content: center;
+             height: 50%;
+             color: black;
              
          }
          #profile_pic{
@@ -29,6 +38,8 @@
              width: 98%;
              align-items: center;
              /* border: 2px solid white; */
+             height: 50%;
+             color: black;
          }
          #name_text{
             display: flex;
@@ -38,7 +49,16 @@
          }
          #wnm{
             width: 75%;
-            height: 20px;
+            padding: 1.2vw;
+            font-size: 1.5vw;
+         }
+         .body{
+           height: 100vh;
+           background-color: black;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
          }
      }
  </style>
@@ -56,9 +76,9 @@
                 <div style="font-size: 1.9vw;margin-bottom: 0.7vw; font-family: 'Montserrat', sans-serif;">I am</div>
                 <div style="font-size: 3vw;margin-bottom: 0.7vw;" id="name_text"><div>MOUNIKA CHEKKA</div></div>
                 <div style="font-size: 1.8vw;margin-bottom: 1vw; font-family: 'Montserrat', sans-serif;">Aspiring Software Engineer</div>
-                <button id="wnm" style="width: 60%;font-size: 1.2vw;"><a href="contents.html" style="text-decoration: none;color: black;font-weight: bold;">Want to know more??</a></button>
+                <button id="wnm" style="width: 60%;font-size: 1.5vw;padding: 1.2vw;"><a href="contents.html" style="text-decoration: none;color: black;font-weight: bold;">Want to know more??</a></button>
                 <!-- <div  style="width: 30%;border: 1px solid white;margin: auto;"> <img src="arrow-removebg-preview.png" alt="Mounika Chekka" id="arrow"></div> -->
-           
+                <div style="width: 12vh;height: 12vh;" ><img src="arrow-removebg-preview.png" style="width: 100%;" id="arrow_"></div>
         </div>
     </div>
 
